@@ -13,15 +13,15 @@ Este documento proporciona instrucciones sobre como configurar y ejecutar el pro
 
 Una vez clonado el repositorio e instalado lo anteriormente listado, se debe:
 
-1. **Abrir la solucion en Visual Studio**
+1. **Abrir la solución en Visual Studio**
 
    La ruta en el repositorio es ``GYF-challenge/WebApplication1/GYF-challenge.sln``
 2. **Restaurar los paquetes NuGet**
 
-	Una vez abierta la solucion, abrir la Consola de administracion de paquetes, ubicada en `Herramientas > Administrador de paquetes NuGet> Consola de administracion de paquetes` y ejecutar el siguiente comando
+	Una vez abierta la solución, abrir la Consola de administración de paquetes, ubicada en `Herramientas > Administrador de paquetes NuGet> Consola de administracion de paquetes` y ejecutar el siguiente comando
 	```bash
 	dotnet restore
-3. **Configurar la cadena de conexion**
+3. **Configurar la cadena de conexión**
 
 	En el archivo `appsettings.json` debe indicarse el nombre del servidor de la base de datos.
 
@@ -31,19 +31,19 @@ Una vez clonado el repositorio e instalado lo anteriormente listado, se debe:
 		},
 
 
-	Donde SERVER_NAME debera ser reemplazado por el nombre correcto. Ademas, en el archivo `AppDbContext.cs` tambien debera indicarse el nombre correcto del servidor
+	Donde SERVER_NAME deberá ser reemplazado por el nombre correcto. Además, en el archivo `AppDbContext.cs` también deberá indicarse el nombre correcto del servidor
 		
 			private const string SERVER_NAME = "SERVER_NAME";
 
 
-	Donde SERVER_NAME debera ser reemplazado por el nombre correcto igual que en `appsettings.json`.
+	Donde SERVER_NAME deberá ser reemplazado por el nombre correcto igual que en `appsettings.json`.
 
 4. **Crear base de datos**
 
 	Acceder con SSMS al servidor que se usa y crear una nueva base de datos llamada `gyf_challenge`.
-5. **Generar primera migracion**
+5. **Generar primera migración**
 
-	Abrir nuevamente la Consola de administracion de paquetes, donde el proyecto predeterminado debe ser `Datos` y ejecutar `.\DataBaseInitializer.ps1`, esto hace que se genere la primera migracion la cual genera las tablas. La populacion se generaran a la hora de ejecutar el proyecto, ya que cuenta con el archivo `InitializeDbObjects.cs` al cual genera datos en caso de que en primera instancia las tablas esten vacias.
+	Abrir nuevamente la Consola de administración de paquetes, donde el proyecto predeterminado debe ser `Datos` y ejecutar `.\DataBaseInitializer.ps1`, esto hace que se genere la primera migración la cual genera las tablas. La populación se generaran a la hora de ejecutar el proyecto, ya que cuenta con el archivo `InitializeDbObjects.cs` al cual genera datos en caso de que en primera instancia las tablas estén vacías.
 6. **Ejecutar el proyecto**
 
 	En la terminal indicar los comandos `dotnet build` para construir y seguido `dotnet run` para ejecutarlo.

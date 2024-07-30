@@ -1,0 +1,45 @@
+# Archivos de compilación
+*.dll
+*.exe
+*.obj
+*.pdb
+*.cache
+
+# Carpetas de compilación
+bin/
+obj/
+
+# Archivos de usuario
+*.user
+*.suo
+*.sln.docstates
+
+# Configuraciones específicas del entorno de desarrollo
+.vscode/
+.idea/
+
+# Archivos de NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# Archivos generados por el IDE
+*.log
+*.vspscc
+
+# Configuración de test y cobertura de código
+coverage/
+*.coverage
+*.coveragexml
+*.testresults
+
+# Entornos de contenedor
+docker-compose.override.yml
+docker-compose.local.yml
+.docker/
+
+# Archivos temporales del sistema
+*.swp
+*.swo
+*.tmp

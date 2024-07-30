@@ -10,7 +10,7 @@ namespace Datos.Database
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Producto> Productos { get; set; }
 
-        private const string SERVER_NAME = "DESKTOP-ATN95TU\\MSSQLSERVER03";
+        private const string SERVER_NAME = "SERVER_NAME";
         private static readonly string ConnectionString = $"Server={SERVER_NAME};Database=gyf_challenge;Trusted_Connection=True;TrustServerCertificate=True;";
 
         public AppDbContext()
